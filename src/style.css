@@ -13,3 +13,81 @@ The designs were created to the following widths:
     --violet:  hsl(257, 40%, 49%);
     --magenta: hsl(300, 69%, 71%);
 }
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: url("./images/bg-mobile.svg") var(--violet) no-repeat;
+}
+header {
+    padding: 2rem;
+}
+header img {
+    width: 264px;
+    max-width: 50%;
+    height: 49px;
+}
+.hero {
+    margin: 0 .5rem;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+.hero-img {
+    width: 83%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 2rem;
+}
+.hero-txt {
+    margin: 1rem 1.8rem;
+}
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+button {
+    border: none;
+    background-color: hsl(0, 0%, 100%);
+    color: var(--violet);
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, .3);
+    cursor: pointer;
+}
+footer {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+}
+.fab {
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    padding: .4rem;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+.fa-facebook-f {
+    padding: .4rem 0.6rem;
+}
+.hidden {
+    position: absolute;
+    top: -1000px;
+}
