@@ -21,7 +21,7 @@ The designs were created to the following widths:
 body {
     background: url("./images/bg-mobile.svg") var(--violet) no-repeat;
 }
-header {
+header, footer {
     padding: 2rem;
 }
 header img {
@@ -59,33 +59,59 @@ button {
     color: var(--violet);
     font-family: 'Poppins', sans-serif;
     display: inline-block;
-    width: 12rem;
-    height: 2.5rem;
+    width: 12em;
+    height: 2.8em;
     border-radius: 20px;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, .3);
     cursor: pointer;
-}
-footer {
-    padding: 2rem;
-    margin-top: 2rem;
 }
 footer ul {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    margin: 0 auto;
+    justify-content: center;
 }
 .fab {
     color: hsl(0, 0%, 100%);
     font-size: 1rem;
     padding: .4rem;
+    margin: 0 .5rem;
     border: 1px solid hsl(0, 0%, 100%);
     border-radius: 50%;
 }
 .fa-facebook-f {
     padding: .4rem 0.6rem;
+}
+@media screen and (min-width: 50em) {
+    body {
+        background-image: url("./images/bg-desktop.svg");
+    }
+    .hero {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 90%;
+        margin: 2rem auto 0;
+        text-align: left;
+    }
+    .hero-txt {
+        transform: translateY(2rem);
+        padding-right: 2rem;
+    }
+    h2 {
+        font-size: calc(32rem / 16);
+        margin-right: 5rem;
+    }
+    .hero p {
+        margin-right: 2rem;
+    }
+    footer {
+        display: flex;
+        justify-content: right;
+    }
+    footer ul {
+        margin-right: 4rem;
+    }
 }
 .hidden {
     position: absolute;
