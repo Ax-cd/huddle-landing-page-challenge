@@ -1,14 +1,5 @@
-/* ## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-/*HEADING font-family: 'Poppins', sans-serif; 400 600 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-/*BODY font-family: 'Open Sans', sans-serif; 400 */
 :root {
     --violet:  hsl(257, 40%, 49%);
     --magenta: hsl(300, 69%, 71%);
@@ -19,7 +10,12 @@ The designs were created to the following widths:
     margin: 0;
 }
 body {
-    background: url("./images/bg-mobile.svg") var(--violet) no-repeat;
+    background: url("./images/bg-mobile.svg") var(--violet) no-repeat top center;
+}
+@media screen and (min-width: 40em) {
+    body {
+        background-image: url("./images/bg-desktop.svg");
+    }
 }
 header, footer {
     padding: 2rem;
@@ -65,6 +61,10 @@ button {
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, .3);
     cursor: pointer;
 }
+button:hover {
+    color: hsl(0, 0%, 100%);
+    background-color: var(--magenta);
+}
 footer ul {
     list-style: none;
     display: flex;
@@ -79,13 +79,14 @@ footer ul {
     border: 1px solid hsl(0, 0%, 100%);
     border-radius: 50%;
 }
+.fab:hover {
+    color: var(--magenta);
+    border-color: var(--magenta);
+}
 .fa-facebook-f {
     padding: .4rem 0.6rem;
 }
 @media screen and (min-width: 50em) {
-    body {
-        background-image: url("./images/bg-desktop.svg");
-    }
     .hero {
         display: flex;
         align-items: flex-start;
