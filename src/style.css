@@ -39,9 +39,10 @@ header img {
 .hero-txt {
     margin: 1rem 1.8rem;
 }
-h2 {
+h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    font-size: calc(24rem / 16);
     margin-bottom: 1rem;
 }
 .hero p {
@@ -86,6 +87,19 @@ footer ul {
 .fa-facebook-f {
     padding: .4rem 0.6rem;
 }
+.attribution {
+    color: hsl(0, 0%, 100%);
+    font-family: 'Open Sans', sans-serif;
+    margin-top: .4rem;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.attribution a:hover {
+    color: var(--magenta);
+}
 @media screen and (min-width: 50em) {
     .hero {
         display: flex;
@@ -99,7 +113,7 @@ footer ul {
         transform: translateY(2rem);
         padding-right: 2rem;
     }
-    h2 {
+    h1 {
         font-size: calc(32rem / 16);
         margin-right: 5rem;
     }
@@ -108,13 +122,13 @@ footer ul {
     }
     footer {
         display: flex;
-        justify-content: right;
+        flex-direction: column;
+        align-items: flex-end;
     }
     footer ul {
-        margin-right: 4rem;
+        max-width: fit-content;
     }
-}
-.hidden {
-    position: absolute;
-    top: -1000px;
+    .attribution {
+        max-width: fit-content;
+    }
 }
